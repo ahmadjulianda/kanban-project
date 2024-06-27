@@ -17,7 +17,7 @@ class TaskController extends Controller
     public function index()
     {
     $pageTitle = 'Task List'; // Ditambahkan
-    $tasks = Task::all(); // Diperbarui dari $this->tasks; agar dapat mengakses model Task
+    $tasks = Task::all(); // Membaca semua data dari database model Task
     return view('tasks.index', [
         'pageTitle' => $pageTitle, //Ditambahkan
         'tasks' => $tasks,
@@ -29,7 +29,7 @@ class TaskController extends Controller
         $pageTitle = 'Edit Task';
        // $tasks = $this->tasks;
        // $task = $tasks[$id - 1];
-       $task = Task::find($id); // Diperbarui
+       $task = Task::find($id); // Membaca data tertentu dari database Task
 
         return view('tasks.edit', ['pageTitle' => $pageTitle, 'task' => $task]);
     }
