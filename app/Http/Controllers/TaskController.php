@@ -37,10 +37,10 @@ class TaskController extends Controller
     public function create()
     {
     $pageTitle = 'Create Task'; // Ditambahkan
-    $tasks = $this->tasks;
+    // $tasks = $this->tasks;
     return view('tasks.create', [
         'pageTitle' => $pageTitle, //Ditambahkan
-        'tasks' => $tasks,
+    // 'tasks' => $tasks,
     ]);
     }
 
